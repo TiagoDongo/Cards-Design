@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #5faaff, #7bfed7);
+}
+
+.card-container{
+    position: relative;
+    border: 1px solid #999;
+    border-radius: 22px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #faf4f2;
+    transition: all 0.3s ease;
+    padding: 50px;
+}
+
+.card-container:hover{
+    box-shadow: none;
+}
+
+.card-container .qr-code{
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+.card-container .qr-code img{
+    width: 20em;
+    height: 20em;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    border-top: 1px solid transparent
+}
+
+.card-container .status{
+    display: grid;
+    box-sizing: border-box;
+    padding: 10px 92px 10px;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    border-radius: 22px;
+}
+
+.card-container .status h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    color: #555;
+    cursor: default;
+    text-align: center;
+    font-weight: 500;
+}
+
+.card-container .status .contacts{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 30px;
+}
+
+.card-container .status .contacts > button{
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    background: #f4f4f4;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 300;
+}
+
+.card-container .status .contacts > button i{
+    margin-right: 10px;
+}
+
+
+
+.card-container .status .contacts > button i:hover,
+.card-container .status .contacts > button:hover{
+    box-shadow: none;
+    color: #f4f4f4;
+    background: #777;
+    
+}
+
+.card-container  > small{
+    margin-top: 20px;
+    margin-bottom: -30px;
+    color: #999;
+    text-align: center;
+    font-weight: 200;
+}
