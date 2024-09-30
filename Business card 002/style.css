@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root{
+    --color-background: #181a1e;
+    --color-dark: #202528;
+    --color-dark-variant: #677483;
+
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #2b2e34;
+}
+
+.main-contaiter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-contaiter .back-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 24px;
+    background: var(--color-background);
+    gap: 10px;
+    width: 400px;
+    height: 250px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-dark-variant);
+    position: relative;
+}
+
+.main-contaiter .back-card::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid var(--color-dark-variant);
+    border-radius: 14px;
+}
+
+.main-contaiter .back-card:hover,
+.main-contaiter .front-card:hover{
+    box-shadow: none;
+}
+
+.main-contaiter .back-card > i{
+    font-size: 50px;
+    color: var(--color-dark-variant);
+}
+
+.main-contaiter .back-card > small{
+    color: var(--color-dark-variant);
+}
+
+.main-contaiter .front-card{
+    background: var(--color-background);
+    box-shadow: var(--box-shadow);
+    justify-content: space-between;
+    display: flex;
+    gap: 4px;
+    border-radius: 24px;
+    align-items: stretch;
+    width: 400px;
+    height: 250px;
+    transition: all 0.3s ease;
+}
+
+.main-contaiter .front-card .profile{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--color-dark-variant);
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: var(--color-dark);
+}
+
+
+.main-contaiter .front-card .profile .person{
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--color-success);
+    padding: 2px;
+    margin-bottom: 0;
+}
+
+.main-contaiter .front-card .profile .qr{
+    width: 90px;
+    border: 2px solid var(--color-dark-variant);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.main-contaiter .front-card .profile .info{
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-contaiter .front-card .profile .info > h2{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-dark-variant);
+    cursor: default;
+    user-select: none;
+}
+
+.main-contaiter .front-card .profile .info > h2 span{
+    color: var(--color-danger);
+}
+
+.main-contaiter .front-card .profile .info > small{
+    color: var(--color-dark-variant);
+    font-size: 12px;
+    font-weight: 400;
+    cursor: default;
+    user-select: none;
+}
+
+
+.main-contaiter .front-card .contacts{
+    display: grid;
+    grid-template-columns: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-contaiter .front-card .contacts .item-1,
+.main-contaiter .front-card .contacts .item-2,
+.main-contaiter .front-card .contacts .item-3{
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+    gap: 10px;
+    border: 1px solid var(--color-dark-variant);
+    width: 100%;
+    padding: 4px;
+}
+
+.main-contaiter .front-card .contacts .item-1 i,
+.main-contaiter .front-card .contacts .item-2 i,
+.main-contaiter .front-card .contacts .item-3 i{
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-contaiter .front-card .contacts .item-1 p,
+.main-contaiter .front-card .contacts .item-3 p,
+.main-contaiter .front-card .contacts .item-2 a{
+    color: var(--color-primary);
+}
+
+.main-contaiter .front-card .contacts .item-1 p span{
+    color: var(--color-success);
+}
+
+.main-contaiter .front-card .contacts .item-1 i{
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.main-contaiter .front-card .contacts .item-2 i{
+    color: var(--color-warning);
+    border: 1px solid var(--color-warning);
+}
+
+.main-contaiter .front-card .contacts .item-3 i{
+    color: var(--color-danger);
+    border: 1px solid var(--color-danger);
+}
