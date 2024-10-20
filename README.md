@@ -1,3 +1,3 @@
-# Business-Cards
+# Cards Design
 
-Coleção de cartões de contacto/visita
+Coleção de design de cartoes informativos, de contacto, etc...
