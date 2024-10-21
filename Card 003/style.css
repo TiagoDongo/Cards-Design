@@ -42,6 +42,7 @@ p{
 
 img{
     width: 120px;
+    border-radius: 8px;
 }
 
 .container{
@@ -50,6 +51,7 @@ img{
     background: var(--color-background);
     width: 448px;
     gap: 20px;
+    border-radius: 12px;
 }
 
 .container header{
@@ -90,11 +92,21 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .navbar .nav-link i:hover{
+    background: var(--body-color);
+    color: var(--body-background);
 }
 
 .container .navbar .nav-link i{
     border: 1px solid var(--body-color);
     padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .container .about{
