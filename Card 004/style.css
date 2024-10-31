@@ -7,3 +7,8 @@
     font-family: "Roboto", sans-serif;
     text-align: none;
 }
+
+
+.back-card {
+    display: none; /* Esconda a parte de trás inicialmente */
+}
