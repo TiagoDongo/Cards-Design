@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --color-background: #f3f1f2;
+    --color-background_2: #C4A69D;
+    --color-text: #010101;
+
+    --color-instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+    --color-linkedin: #0077b5;
+    --color-github: #333;
+
+    --border-raious_1: 18px;
+    --border-radious_2: 12px;
+    --border-1: 2px solid #010101;
+    --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: var(--color-background_2);
+}
+
+.container{
+    background: var(--color-background);
+    height: 400px;
+    width: 300px;
+    border: var(--border-1);
+    padding: 8px;
+    border-radius: var(--border-raious_1);
+    position: absolute;
+}
+
+.container .send{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: var(--border-1);
+    padding: 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container .card-container{
+    border: var(--border-1);
+    border-radius: var(--border-radious_2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .card-container .logo{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.container .card-container .logo > h3{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.container .card-container .logo .logo-img{
+    border: var(--border-1);
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.container .card-container .logo .logo-img > img{
+    width: 70px;
+    height: 70px;
+}
+
+.container .card-container .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 4px;
+}
+
+.container .card-container .content > p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container .card-container .content > small{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.container .card-container .content .portfolio{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.container .card-container .content .portfolio > img{
+    width: 120px;
+    height: 120px;
+    border: var(--border-1);
+    border-radius: 6px;
+}
+
+.container .card-container .content .portfolio > p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.container .card-container .social{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.container .card-container .social .icon{
+    text-decoration: none;
+    border: var(--border-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container .card-container .social .icon > i{
+    color: var(--color-text);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.container .card-container .social .icon:hover > i{
+    scale: 1.2;
+}
+
+.container .card-container .social .icon::before{
+    background: var(--color);
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+}
+
+.container .card-container .social .icon:hover::before{
+    animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+    50% {
+    left: 10%;
+    top: -40%;
+    }
+    
+    100% {
+    left: -15%;
+    top: -15%;
+    }
+}
+
+.container .card-container .social .icon:has(.bxl-github){
+    --color: var(--color-github);
+}
+
+.container .card-container .social .icon:has(.bxl-linkedin){
+    --color: var(--color-linkedin);
+}
+
+.container .card-container .social .icon:has(.bxl-instagram){
+    --color: var(--color-instagram);
+}
