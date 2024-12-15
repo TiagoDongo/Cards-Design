@@ -3,17 +3,19 @@
 
 :root{
     --color-background: #f3f1f2;
-    --color-background_2: #C4A69D;
+    --color-body-background: linear-gradient(145deg, #0d4671, #5094aa, #92e1e2);
     --color-text: #010101;
 
     --color-instagram: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
     --color-linkedin: #0077b5;
     --color-github: #333;
+    --logo-background: linear-gradient(145deg,#5094aa, #92e1e2);;
 
     --border-raious_1: 18px;
     --border-radious_2: 12px;
     --border-1: 2px solid #010101;
-    --box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+    --border-2: 1px solid #010101;
+    --box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.4);
 
 }
 
@@ -29,7 +31,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: var(--color-background_2);
+    background: var(--color-body-background);
 }
 
 .container{
@@ -46,13 +48,23 @@ body{
     position: absolute;
     top: 20px;
     right: 20px;
-    border: var(--border-1);
+    border: 1px solid #5094aa;
+    background: #5094aa;
+    color: var(--color-background);
     padding: 4px;
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
     cursor: pointer;
+}
+
+.container .send:hover{
+    box-shadow: none;
+    background: var(--color-background);
+    color: #5094aa;
 }
 
 .container .card-container{
@@ -86,6 +98,7 @@ body{
     align-items: center;
     justify-content: center;
     align-content: center;
+    background: var(--logo-background);
 }
 
 .container .card-container .logo .logo-img > img{
@@ -97,17 +110,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 2px;
     gap: 4px;
 }
 
 .container .card-container .content > p{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
 }
 
 .container .card-container .content > small{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 }
 
@@ -121,12 +134,12 @@ body{
 .container .card-container .content .portfolio > img{
     width: 120px;
     height: 120px;
-    border: var(--border-1);
+    border: var(--border-2);
     border-radius: 6px;
 }
 
 .container .card-container .content .portfolio > p{
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
 }
 
@@ -141,6 +154,7 @@ body{
 .container .card-container .social .icon{
     text-decoration: none;
     border: var(--border-1);
+    box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,6 +162,11 @@ body{
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+    transition: all 0.3s ease;
+}
+
+.container .card-container .social .icon:hover{
+    box-shadow: none;
 }
 
 .container .card-container .social .icon > i{
@@ -158,6 +177,7 @@ body{
 
 .container .card-container .social .icon:hover > i{
     scale: 1.2;
+    color: var(--color-background);
 }
 
 .container .card-container .social .icon::before{
